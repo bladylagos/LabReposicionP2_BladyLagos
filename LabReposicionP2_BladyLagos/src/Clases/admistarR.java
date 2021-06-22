@@ -11,7 +11,7 @@ import javax.swing.JProgressBar;
 
 /**
  *
- * @author Kevin
+ * @author Gerardo Lagos
  */
 public class admistarR extends Thread {
 

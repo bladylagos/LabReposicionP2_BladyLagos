@@ -23,7 +23,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author Kevin
+ * @author Gerardo Lagos
  */
 public class inicio extends javax.swing.JFrame {
 

@@ -7,7 +7,7 @@ package Clases;
 
 /**
  *
- * @author Kevin
+ * @author Gerardo Lagos
  */
 public class regular {
     

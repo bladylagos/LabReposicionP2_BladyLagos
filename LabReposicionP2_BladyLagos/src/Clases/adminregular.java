@@ -14,7 +14,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author Kevin
+ * @author Gerardo Lagos
  */
 public class adminregular {
 
