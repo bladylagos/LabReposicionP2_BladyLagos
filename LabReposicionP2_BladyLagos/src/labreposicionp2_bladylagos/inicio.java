@@ -47,9 +47,9 @@ public class inicio extends javax.swing.JFrame {
     Thread tiempo2 = new Thread() {
         public void run() {
             try {
-                for (int seg = 1; seg <= 50; seg++) {
-                    jProgressBar2.setValue(seg);
-                    jTextField2.setText(" " + seg / 10);
+                for (int seg2 = 1; seg2 <= 50; seg2++) {
+                    jProgressBar2.setValue(seg2);
+                    jTextField2.setText(" " + seg2 / 10);
                     tiempo2.sleep(50);
                 }
                 JOptionPane.showMessageDialog(null, "Hackeo Realizado Correctamente");
@@ -99,6 +99,10 @@ public class inicio extends javax.swing.JFrame {
         jProgressBar2 = new javax.swing.JProgressBar();
         pg_d = new javax.swing.JProgressBar();
         pg_d1 = new javax.swing.JProgressBar();
+        jButton16 = new javax.swing.JButton();
+        nivel4 = new javax.swing.JComboBox<>();
+        nivel1 = new javax.swing.JComboBox<>();
+        nivel5 = new javax.swing.JComboBox<>();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
         hakeo = new javax.swing.JLabel();
@@ -113,11 +117,11 @@ public class inicio extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         codigo1 = new javax.swing.JFormattedTextField();
         jLabel5 = new javax.swing.JLabel();
-        nivel1 = new javax.swing.JComboBox<>();
         jLabel6 = new javax.swing.JLabel();
         fallos = new javax.swing.JTextField();
         jButton2 = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
+        nivel11 = new javax.swing.JComboBox<>();
         jPanel3 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tabla1 = new javax.swing.JTable();
@@ -134,9 +138,7 @@ public class inicio extends javax.swing.JFrame {
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
-        nivel4 = new javax.swing.JComboBox<>();
         jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
         jButton9 = new javax.swing.JButton();
         jButton10 = new javax.swing.JButton();
         jScrollPane4 = new javax.swing.JScrollPane();
@@ -144,7 +146,10 @@ public class inicio extends javax.swing.JFrame {
         jScrollPane5 = new javax.swing.JScrollPane();
         tabla3 = new javax.swing.JTable();
         jButton15 = new javax.swing.JButton();
-        jButton16 = new javax.swing.JButton();
+        jButton21 = new javax.swing.JButton();
+        nivel44 = new javax.swing.JComboBox<>();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
         jScrollPane6 = new javax.swing.JScrollPane();
         tabla4 = new javax.swing.JTable();
@@ -385,6 +390,25 @@ public class inicio extends javax.swing.JFrame {
         pg_d1.setString(Integer.toString(pg_d.getValue())+" Kilometros");
         pg_d1.setStringPainted(true);
 
+        jButton16.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jButton16.setText("Modificar Hack Super");
+        jButton16.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton16MouseClicked(evt);
+            }
+        });
+        jButton16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton16ActionPerformed(evt);
+            }
+        });
+
+        nivel4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "6", "7", "8", "9", "10" }));
+
+        nivel1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "6", "7", "8", "9", "10" }));
+
+        nivel5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" }));
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jTabbedPane1.addChangeListener(new javax.swing.event.ChangeListener() {
@@ -449,17 +473,21 @@ public class inicio extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(codigo, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1))
-                .addGap(36, 36, 36)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(nivel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(38, 38, 38)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(exitoso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 135, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addGap(149, 149, 149))
+                .addGap(41, 41, 41)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(59, 218, Short.MAX_VALUE)
+                        .addComponent(jButton1)
+                        .addGap(149, 149, 149))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(nivel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel2))
+                        .addGap(55, 55, 55)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel3)
+                            .addComponent(exitoso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
         jTabbedPane1.addTab("Regular", jPanel1);
@@ -467,8 +495,6 @@ public class inicio extends javax.swing.JFrame {
         jLabel4.setText("Codigo:");
 
         jLabel5.setText("Nivel de riesgo:");
-
-        nivel1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "6", "7", "8", "9", "10" }));
 
         jLabel6.setText("Numeros de hakeos fallidos:");
 
@@ -484,6 +510,8 @@ public class inicio extends javax.swing.JFrame {
 
         jLabel7.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         jLabel7.setText("Hack Super");
+
+        nivel11.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" }));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -504,9 +532,8 @@ public class inicio extends javax.swing.JFrame {
                         .addGap(37, 37, 37)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(codigo1, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(fallos, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(nivel1, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                            .addComponent(fallos, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(nivel11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(346, 346, 346)
                         .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -524,7 +551,7 @@ public class inicio extends javax.swing.JFrame {
                 .addGap(56, 56, 56)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(nivel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(nivel11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(58, 58, 58)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
@@ -632,25 +659,11 @@ public class inicio extends javax.swing.JFrame {
         jLabel13.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jLabel13.setText("Hack Super");
 
-        nivel4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "6", "7", "8", "9", "10" }));
-
         jButton7.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jButton7.setText("Mostrar Hack");
         jButton7.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton7MouseClicked(evt);
-            }
-        });
-
-        jButton8.setText("modificar hack super");
-        jButton8.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton8MouseClicked(evt);
-            }
-        });
-        jButton8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton8ActionPerformed(evt);
             }
         });
 
@@ -712,25 +725,33 @@ public class inicio extends javax.swing.JFrame {
         jScrollPane5.setViewportView(tabla3);
 
         jButton15.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jButton15.setText("Modificar Hack Super");
+        jButton15.setText("Modificar Hack Regular");
         jButton15.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton15MouseClicked(evt);
             }
         });
 
-        jButton16.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jButton16.setText("Modificar Hack Super");
-        jButton16.addMouseListener(new java.awt.event.MouseAdapter() {
+        jButton21.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jButton21.setText("modificar hack super");
+        jButton21.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton16MouseClicked(evt);
+                jButton21MouseClicked(evt);
             }
         });
-        jButton16.addActionListener(new java.awt.event.ActionListener() {
+        jButton21.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton16ActionPerformed(evt);
+                jButton21ActionPerformed(evt);
             }
         });
+
+        nivel44.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" }));
+
+        jLabel18.setForeground(new java.awt.Color(255, 102, 102));
+        jLabel18.setText("Seleccion el Hack que desea modificar");
+
+        jLabel19.setForeground(new java.awt.Color(255, 102, 102));
+        jLabel19.setText("Seleccion el Hack que desea modificar");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -751,8 +772,8 @@ public class inicio extends javax.swing.JFrame {
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addComponent(jLabel10)
-                        .addGap(45, 45, 45)
-                        .addComponent(nivel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(nivel44, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addComponent(jLabel11)
                         .addGap(18, 18, 18)
@@ -764,12 +785,6 @@ public class inicio extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(123, 123, 123))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 226, Short.MAX_VALUE)
-                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(54, 54, 54))
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -788,11 +803,24 @@ public class inicio extends javax.swing.JFrame {
                         .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(120, 120, 120))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                        .addComponent(jButton8)
-                        .addGap(90, 90, 90))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                        .addComponent(jButton16, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(77, 77, 77))))
+                        .addComponent(jButton21, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(98, 98, 98))))
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(28, 28, 28)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGap(26, 26, 26)
+                        .addComponent(jLabel18)))
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(54, 54, 54))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGap(249, 249, 249)
+                        .addComponent(jLabel19)
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -820,8 +848,12 @@ public class inicio extends javax.swing.JFrame {
                         .addGap(58, 58, 58)
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel10)
-                            .addComponent(nivel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(56, 56, 56)
+                            .addComponent(nivel44, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(28, 28, 28)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel18)
+                    .addComponent(jLabel19))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -835,11 +867,9 @@ public class inicio extends javax.swing.JFrame {
                 .addGap(29, 29, 29)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton15)
-                    .addComponent(jButton16))
+                    .addComponent(jButton21))
                 .addGap(42, 42, 42)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton8)
-                    .addComponent(jButton10))
+                .addComponent(jButton10)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -1026,7 +1056,7 @@ public class inicio extends javax.swing.JFrame {
         } catch (IOException ex) {
             Logger.getLogger(inicio.class.getName()).log(Level.SEVERE, null, ex);
         }
-        JOptionPane.showMessageDialog(null, "Se agrego hack regular correctamente");
+        JOptionPane.showMessageDialog(null, "se agrego hack regular correctamente");
 
         codigo.setText("");
     }//GEN-LAST:event_jButton1MouseClicked
@@ -1034,7 +1064,7 @@ public class inicio extends javax.swing.JFrame {
     private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
         adminsuper ac = new adminsuper("./super.txt");
         ac.cargarArchivo();
-        hacksuper c = new hacksuper(Integer.parseInt(codigo1.getText()), Integer.parseInt(nivel1.getSelectedItem().toString()), Integer.parseInt(fallos.getText())
+        hacksuper c = new hacksuper(Integer.parseInt(codigo1.getText()), Integer.parseInt(nivel11.getSelectedItem().toString()), Integer.parseInt(fallos.getText())
         );
         ac.getsuper().add(c);
         try {
@@ -1106,45 +1136,6 @@ public class inicio extends javax.swing.JFrame {
         tabla3.setModel(modelo);
     }//GEN-LAST:event_jButton7MouseClicked
 
-    private void jButton8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton8MouseClicked
-        /* adminsuper ap
-                = new adminsuper("./super.txt");
-        int p;
-        p = Integer.parseInt(JOptionPane.showInputDialog("Posicion"));
-
-        ap.cargarArchivo();
-        ap.getsuper().get(p).setCodigo(Integer.parseInt(codigo3.getText()));
-        ap.getsuper().get(p).setNivel(Integer.parseInt(nivel4.getSelectedItem().toString()));
-         ap.getsuper().get(p).setCodigo(Integer.parseInt(fallos.getText()));
-        codigo3.setText("");
-
-        JOptionPane.showMessageDialog(null, "Se modifico correctamente vulva a precionar el boton mostrar hack");
-         try {
-            ap.escribirArchivo();
-        } catch (IOException ex) {
-            Logger.getLogger(inicio.class.getName()).log(Level.SEVERE, null, ex);
-        }*/
-        if (tabla3.getSelectedRow() >= 0) {
-            adminsuper au = new adminsuper("./super.txt");
-            DefaultTableModel modelo
-                    = (DefaultTableModel) tabla3.getModel();
-            au.cargarArchivo();
-            au.getsuper().get(tabla3.getSelectedRow()).setCodigo(Integer.parseInt(codigo3.getText()));
-            au.getsuper().get(tabla3.getSelectedRow()).setNivel(Integer.parseInt(nivel4.getSelectedItem().toString()));
-
-            try {
-                au.escribirArchivo();
-            } catch (IOException ex) {
-                Logger.getLogger(inicio.class.getName()).log(Level.SEVERE, null, ex);
-            }
-            modelo.setValueAt(Integer.parseInt(codigo3.getText()), 0, tabla3.getSelectedRow());
-            modelo.setValueAt(Integer.parseInt(nivel2.getSelectedItem().toString()), 0, tabla3.getSelectedRow());
-            tabla3.setModel(modelo);
-            tabla3.setModel(modelo);
-            JOptionPane.showMessageDialog(null, "Se modifico correctamente vulva a precionar el boton mostrar hack");
-        }
-    }//GEN-LAST:event_jButton8MouseClicked
-
     private void jButton9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton9MouseClicked
         DefaultTableModel modelo1 = (DefaultTableModel) tabla2.getModel();
         modelo1.getDataVector().removeAllElements();
@@ -1203,10 +1194,6 @@ public class inicio extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Se modifico correctamente vulva a precionar el boton mostrar hack");
         }
     }//GEN-LAST:event_jButton10MouseClicked
-
-    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton11MouseClicked
         DefaultTableModel modelo1 = (DefaultTableModel) tabla5.getModel();
@@ -1395,7 +1382,7 @@ public class inicio extends javax.swing.JFrame {
 
     private void jButton15MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton15MouseClicked
         /* adminregular ap
-        = new adminregular("./regular.txt");
+                = new adminregular("./regular.txt");
         int p;
         p = Integer.parseInt(JOptionPane.showInputDialog("Posicion"));
 
@@ -1406,7 +1393,7 @@ public class inicio extends javax.swing.JFrame {
         codigo3.setText("");
 
         JOptionPane.showMessageDialog(null, "Se modifico correctamente vulva a precionar el boton mostrar hack");
-        try {
+         try {
             ap.escribirArchivo();
         } catch (IOException ex) {
             Logger.getLogger(inicio.class.getName()).log(Level.SEVERE, null, ex);
@@ -1429,7 +1416,7 @@ public class inicio extends javax.swing.JFrame {
             modelo.setValueAt(Integer.parseInt(nivel2.getSelectedItem().toString()), 0, tabla2.getSelectedRow());
             tabla2.setModel(modelo);
             tabla2.setModel(modelo);
-            JOptionPane.showMessageDialog(null, "Se modifico correctamente vulva a precionar el boton mostrar hack");
+            JOptionPane.showMessageDialog(null, "Se modifico correctamente, vuelva a precionar el boton mostrar hack");
         }
     }//GEN-LAST:event_jButton15MouseClicked
 
@@ -1451,25 +1438,25 @@ public class inicio extends javax.swing.JFrame {
         } catch (IOException ex) {
             Logger.getLogger(inicio.class.getName()).log(Level.SEVERE, null, ex);
         }*/
-        if (tabla3.getSelectedRow() >= 0) {
-            adminsuper au = new adminsuper("./super.txt");
-            DefaultTableModel modelo
-                    = (DefaultTableModel) tabla3.getModel();
-            au.cargarArchivo();
-            au.getsuper().get(tabla3.getSelectedRow()).setCodigo(Integer.parseInt(codigo3.getText()));
-            au.getsuper().get(tabla3.getSelectedRow()).setNivel(Integer.parseInt(nivel4.getSelectedItem().toString()));
-
-            try {
-                au.escribirArchivo();
-            } catch (IOException ex) {
-                Logger.getLogger(inicio.class.getName()).log(Level.SEVERE, null, ex);
-            }
-            modelo.setValueAt(Integer.parseInt(codigo3.getText()), 0, tabla3.getSelectedRow());
-            modelo.setValueAt(Integer.parseInt(nivel2.getSelectedItem().toString()), 0, tabla3.getSelectedRow());
-            tabla3.setModel(modelo);
-            tabla3.setModel(modelo);
-            JOptionPane.showMessageDialog(null, "Se modifico correctamente vulva a precionar el boton mostrar hack");
-        }
+//        if (tabla3.getSelectedRow() >= 0) {
+//            adminsuper au = new adminsuper("./super.txt");
+//            DefaultTableModel modelo
+//                    = (DefaultTableModel) tabla3.getModel();
+//            au.cargarArchivo();
+//            au.getsuper().get(tabla3.getSelectedRow()).setCodigo(Integer.parseInt(codigo3.getText()));
+//            au.getsuper().get(tabla3.getSelectedRow()).setNivel(Integer.parseInt(nivel44.getSelectedItem().toString()));
+////1
+//            try {
+//                au.escribirArchivo();
+//            } catch (IOException ex) {
+//                Logger.getLogger(inicio.class.getName()).log(Level.SEVERE, null, ex);
+//            }
+//            modelo.setValueAt(Integer.parseInt(codigo3.getText()), 0, tabla3.getSelectedRow());
+//            modelo.setValueAt(Integer.parseInt(nivel2.getSelectedItem().toString()), 0, tabla3.getSelectedRow());
+//            tabla3.setModel(modelo);
+//            tabla3.setModel(modelo);
+//            JOptionPane.showMessageDialog(null, "Se modifico correctamente vulva a precionar el boton mostrar hack");
+//        }
     }//GEN-LAST:event_jButton16MouseClicked
 
     private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
@@ -1491,6 +1478,49 @@ public class inicio extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Eliminado correctamente");
         }
     }//GEN-LAST:event_jButton6MouseClicked
+
+    private void jButton21MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton21MouseClicked
+        /* adminsuper ap
+                = new adminsuper("./super.txt");
+        int p;
+        p = Integer.parseInt(JOptionPane.showInputDialog("Posicion"));
+
+        ap.cargarArchivo();
+        ap.getsuper().get(p).setCodigo(Integer.parseInt(codigo3.getText()));
+        ap.getsuper().get(p).setNivel(Integer.parseInt(nivel4.getSelectedItem().toString()));
+         ap.getsuper().get(p).setCodigo(Integer.parseInt(fallos.getText()));
+        codigo3.setText("");
+
+        JOptionPane.showMessageDialog(null, "Se modifico correctamente vulva a precionar el boton mostrar hack");
+         try {
+            ap.escribirArchivo();
+        } catch (IOException ex) {
+            Logger.getLogger(inicio.class.getName()).log(Level.SEVERE, null, ex);
+        }*/
+        if (tabla3.getSelectedRow() >= 0) {
+            adminsuper au = new adminsuper("./super.txt");
+            DefaultTableModel modelo
+                    = (DefaultTableModel) tabla3.getModel();
+            au.cargarArchivo();
+            au.getsuper().get(tabla3.getSelectedRow()).setCodigo(Integer.parseInt(codigo3.getText()));
+            au.getsuper().get(tabla3.getSelectedRow()).setNivel(Integer.parseInt(nivel44.getSelectedItem().toString()));
+
+            try {
+                au.escribirArchivo();
+            } catch (IOException ex) {
+                Logger.getLogger(inicio.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            modelo.setValueAt(Integer.parseInt(codigo3.getText()), 0, tabla3.getSelectedRow());
+            modelo.setValueAt(Integer.parseInt(nivel2.getSelectedItem().toString()), 0, tabla3.getSelectedRow());
+            tabla3.setModel(modelo);
+            tabla3.setModel(modelo);
+            JOptionPane.showMessageDialog(null, "Se modifico correctamente vuelva a precionar el boton mostrar hack");
+        }
+    }//GEN-LAST:event_jButton21MouseClicked
+
+    private void jButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton21ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton21ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1551,12 +1581,12 @@ public class inicio extends javax.swing.JFrame {
     private javax.swing.JButton jButton19;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton20;
+    private javax.swing.JButton jButton21;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -1567,6 +1597,8 @@ public class inicio extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -1598,8 +1630,11 @@ public class inicio extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField2;
     private javax.swing.JComboBox<String> nivel;
     private javax.swing.JComboBox<String> nivel1;
+    private javax.swing.JComboBox<String> nivel11;
     private javax.swing.JComboBox<String> nivel2;
     private javax.swing.JComboBox<String> nivel4;
+    private javax.swing.JComboBox<String> nivel44;
+    private javax.swing.JComboBox<String> nivel5;
     public javax.swing.JProgressBar pg_d;
     public javax.swing.JProgressBar pg_d1;
     private javax.swing.JDialog simulacion;
